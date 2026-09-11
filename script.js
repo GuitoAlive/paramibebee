@@ -1,5 +1,5 @@
 // Fecha de inicio (Año, Mes [0-11], Día)
-const startDate = new Date(2023, 9, 15); 
+const startDate = new Date(2024, 2, 11); 
 
 function updateTimer() {
     const now = new Date();

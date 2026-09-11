@@ -139,3 +139,16 @@ h2 {
     font-size: 0.95rem;
     color: #333;
 }
+.spotify-section {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 18px;
+    border-radius: 16px;
+}
+
+.spotify-container {
+    margin-bottom: 12px;
+}
+
+.spotify-container:last-child {
+    margin-bottom: 0;
+}
