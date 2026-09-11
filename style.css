@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(-45deg, #ff9a9e, #fecfef, #a1c4fd, #c2e9fb);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    font-family: 'Poppins', sans-serif;
+    color: #2b2b2b;
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Fondo interactivo con corazones flotantes */
+.heart-particle {
+    position: fixed;
+    bottom: -20px;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+    animation: floatUp 6s linear infinite;
+    z-index: 0;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+}
+
+/* Tarjeta principal con efecto Glassmorphism */
+.card {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    max-width: 460px;
+    width: 100%;
+    border-radius: 24px;
+    padding: 30px 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+h1.title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.2rem;
+    color: #d62828;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: #4a4a4a;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+section {
+    margin-bottom: 28px;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: #b7094c;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Bloque del Contador */
+.timer-section {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 18px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+#timer {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #800f2f;
+    letter-spacing: 0.5px;
+}
+
+/* Fotos */
+.photo-container {
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 12px;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+.photo-container:hover {
+    transform: translateY(-4px);
+}
+
+.photo-container img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+}
+
+.photo-container p {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* Carta */
+.letter {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 16px;
+    text-align: left;
+}
+
+.letter p {
+    line-height: 1.7;
+    font-size: 0.95rem;
+    color: #333;
+}
