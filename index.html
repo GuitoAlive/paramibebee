@@ -27,29 +27,37 @@
         </section>
 
         <!-- Galería de Fotos -->
-        <section class="gallery">
-            <h2>Fotos de usted como siempre linda</h2>
-            <div class="photo-container">
-                <img src="foto1.jpeg" alt="Foto juntos 1">
-                <p>Rey de micheladas, esté dia lo pasé muy bien espero que recuerdes mi pasito con el pie cada vez que te diga que no quiera bailar, y lo que conversé con tu mamá en tu casa</p>
+<!-- Galería de Fotos (Álbumes por Cita) -->
+<section class="gallery">
+    <h2>Nuestros momentos juntos 📸</h2>
+
+    <!-- Álbum 1: Ejemplo Cita / Paseo -->
+    <div class="album-card">
+        <div class="carousel" id="carousel-1">
+            <div class="carousel-slides">
+                <img src="foto1.jpeg" alt="Foto 1">
+                <img src="foto2.jpeg" alt="Foto 2">
             </div>
-            <div class="photo-container">
-                <img src="foto2.jpeg" alt="Foto juntos 2">
-                <p>Jugando y paseando a la Lola, estó fue hace poco en comparación a la fecha que estoy haciendo esto, aún asi me recuerda a la vez que te dije que si le achuntabas al aro te pediría pololeo en menos de mes y medio Y LE ACHUNTASTE YO QUEDE PLOP jajaj te amo bebé</p>
+            <button class="prev" onclick="moveSlide('carousel-1', -1)">❮</button>
+            <button class="next" onclick="moveSlide('carousel-1', 1)">❯</button>
+        </div>
+        <p class="album-caption">Rey de micheladas y paseando a la Lola 🍻🐶</p>
+    </div>
+
+    <!-- Álbum 2: Otra Cita -->
+    <div class="album-card">
+        <div class="carousel" id="carousel-2">
+            <div class="carousel-slides">
+                <img src="foto3.jpeg" alt="Foto 3">
+                <img src="foto4.jpeg" alt="Foto 4">
+                <img src="foto5.jpeg" alt="Foto 5">
             </div>
-            <div class="photo-container">
-                <img src="foto3.jpeg" alt="Foto juntos 3">
-                <p>Paseando por la U, este dia fuímos por mecánica sur e industrial, donde te dije que si no podía hacer un muscleup te pedía pololeo, (cumplí)    </p>
-            </div>
-            <div class="photo-container">
-                <img src="foto4.jpeg" alt="Foto juntos 4">
-                <p>Salida 14f, me gustó mucho esta salida pasear por el parque con usted y ver los patitos y peces que se veian muy ricos, aún tengo el spiderman que me dió y lo tendré por siempre!! </p>
-            </div>
-            <div class="photo-container">
-                <img src="foto5.jpeg" alt="Foto ella 5">
-                <p>te amo❤️</p>
-            </div>
-        </section>
+            <button class="prev" onclick="moveSlide('carousel-2', -1)">❮</button>
+            <button class="next" onclick="moveSlide('carousel-2', 1)">❯</button>
+        </div>
+        <p class="album-caption">Paseo por la U y salida especial del 14F ❤️</p>
+    </div>
+</section>
 
         <!-- Sección de Playlists de Spotify -->
         <section class="spotify-section">

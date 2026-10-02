@@ -35,3 +35,29 @@ function createHeart() {
 }
 
 setInterval(createHeart, 600);
+
+// Lógica para deslizar imágenes en los carruseles
+const carouselIndex = {};
+
+function moveSlide(carouselId, direction) {
+    const carousel = document.getElementById(carouselId);
+    if (!carousel) return;
+
+    const slides = carousel.querySelector('.carousel-slides');
+    const totalSlides = slides.children.length;
+
+    if (!(carouselId in carouselIndex)) {
+        carouselIndex[carouselId] = 0;
+    }
+
+    carouselIndex[carouselId] += direction;
+
+    if (carouselIndex[carouselId] >= totalSlides) {
+        carouselIndex[carouselId] = 0;
+    } else if (carouselIndex[carouselId] < 0) {
+        carouselIndex[carouselId] = totalSlides - 1;
+    }
+
+    const offset = -carouselIndex[carouselId] * 100;
+    slides.style.transform = `translateX(${offset}%)`;
+}

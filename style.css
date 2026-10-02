@@ -152,3 +152,61 @@ h2 {
 .spotify-container:last-child {
     margin-bottom: 0;
 }
+
+/* Estilos para el carrusel de fotos por cita */
+.album-card {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 15px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.carousel-slides img {
+    width: 100%;
+    flex-shrink: 0;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* Botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.35);
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    user-select: none;
+    transition: background 0.2s;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.album-caption {
+    font-size: 0.9rem;
+    color: #4a4a4a;
+    margin-top: 10px;
+    font-style: italic;
+    text-align: center;
+}
