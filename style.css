@@ -154,6 +154,7 @@ h2 {
 }
 
 /* Estilos para el carrusel de fotos por cita */
+/* Estilos para el carrusel ajustado y responsivo */
 .album-card {
     background: rgba(255, 255, 255, 0.5);
     padding: 15px;
@@ -168,16 +169,23 @@ h2 {
     width: 100%;
 }
 
+/* La tira que contiene todas las imágenes */
 .carousel-slides {
     display: flex;
+    width: 100%;
     transition: transform 0.4s ease-in-out;
 }
 
+/* IMPORTANTE: Fuerza a cada foto a ocupar exactamente el 100% del carrusel */
 .carousel-slides img {
     width: 100%;
-    flex-shrink: 0;
-    border-radius: 12px;
+    max-width: 100%;
+    flex: 0 0 100%; /* Evita que las fotos grandes se estiren más allá del contenedor */
+    height: auto;
+    max-height: 400px; /* Limita la altura para que no ocupe toda la pantalla */
     object-fit: cover;
+    border-radius: 12px;
+    display: block;
 }
 
 /* Botones de navegación */
@@ -185,19 +193,24 @@ h2 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.45);
     color: white;
     border: none;
     font-size: 1.2rem;
-    padding: 8px 12px;
+    width: 36px;
+    height: 36px;
     cursor: pointer;
     border-radius: 50%;
     user-select: none;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: background 0.2s;
 }
 
 .prev:hover, .next:hover {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .prev { left: 10px; }
