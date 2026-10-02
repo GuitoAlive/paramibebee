@@ -176,7 +176,7 @@ h2 {
     transition: transform 0.4s ease-in-out;
 }
 
-/* IMPORTANTE: Fuerza a cada foto a ocupar exactamente el 100% del carrusel */
+/* Asegura que tanto fotos como videos se adapten perfectamente al carrusel */
 .carousel-slides img,
 .carousel-slides video {
     width: 100%;
@@ -189,12 +189,12 @@ h2 {
     display: block;
 }
 
-/* Botones de navegación */
+/* Las flechas siempre deben quedar visibles y clickeables sobre el video */
 .prev, .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.45);
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     font-size: 1.2rem;
@@ -203,11 +203,10 @@ h2 {
     cursor: pointer;
     border-radius: 50%;
     user-select: none;
-    z-index: 10;
+    z-index: 20; /* Garantiza que la flecha quede por encima del reproductor */
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.2s;
 }
 
 .prev:hover, .next:hover {
