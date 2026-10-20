@@ -23,7 +23,7 @@ updateTimer();
 function createHeart() {
     const heart = document.createElement("div");
     heart.classList.add("heart-particle");
-    heart.innerHTML = "❤️";
+    heart.innerHTML = "✨";
     heart.style.left = Math.random() * 100 + "vw";
     heart.style.animationDuration = Math.random() * 3 + 4 + "s";
     heart.style.fontSize = Math.random() * 10 + 15 + "px";
